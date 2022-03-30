@@ -8,7 +8,8 @@ class Therapist(models.Model):
     last_name = models.CharField(max_length=100)
     date_of_birth = models.DateField()
     email = models.EmailField(max_length=100)
-
+    date_available = models.DateTimeField()
+    
     class Meta:
         db_table = "Therapist"
 

@@ -8,7 +8,7 @@ class Patient(models.Model):
     last_name = models.CharField(max_length=100)
     date_of_birth = models.DateField()
     email = models.EmailField(max_length=100)
-    
+    user = models.ForeignKey('therapist.Therapist', on_delete=models.CASCADE)
 
     class Meta:
         db_table = "Patient"

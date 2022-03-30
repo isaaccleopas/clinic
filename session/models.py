@@ -4,8 +4,7 @@ from django.db import models
 
 #info for session
 class Session(models.Model):
-    therapist = models.ForeignKey('patient.Patient', models.CASCADE)
-    date_of_appointment = models.DateField()
+    date_of_appointment = models.DateTimeField()
 
     class Meta:
         db_table = "Session"
